@@ -1,3 +1,7 @@
+# CNN
+# 2026 Spring Deep Learning Lab1
+# 两个卷积层，两个池化层，一个全连接层
+
 import torch
 import torch.nn as nn
 
