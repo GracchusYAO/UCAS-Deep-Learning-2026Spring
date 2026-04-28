@@ -16,6 +16,7 @@ class DropPath(nn.Module):
         random_tensor = keep_prob + torch.rand(shape, dtype=x.dtype, device=x.device)
         random_tensor.floor_()
         return x.div(keep_prob) * random_tensor
+        # TODO
 
 
 class Embedding(nn.Module):

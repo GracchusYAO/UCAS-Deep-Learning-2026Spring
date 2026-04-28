@@ -1,0 +1,20 @@
+\frametitle{Patch Embedding 核心代码}
+\begin{lstlisting}
+class Embedding(nn.Module):
+    def __init__(self, image_size=32, patch_size=4,
+                 in_channels=3, embed_dim=256):
+        super().__init__()
+        self.num_patches = (image_size // patch_size) ** 2
+        self.embedding = nn.Sequential(
+            nn.Conv2d(in_channels, embed_dim,
+                      kernel_size=patch_size,
+                      stride=patch_size,
+                      bias=False),
+            nn.Flatten(2)
+        )
+
+    def forward(self, x):
+        output = self.embedding(x)
+        output = output.transpose(1, 2)
+        return output
+\end{lstlisting}
