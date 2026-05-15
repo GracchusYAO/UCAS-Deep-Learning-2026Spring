@@ -1,11 +1,12 @@
 # Fdb version 4
-["xdvipdfmx"] 1777082218.88305 "slides.xdv" "slides.pdf" "slides" 1777082219.10916 0
-  "slides.xdv" 1777082218.81824 179636 59ea4d0f10042d51ef9c90f2f8f39015 "xelatex"
+["xdvipdfmx"] 1777446817.67426 "slides.xdv" "slides.pdf" "slides" 1777446818.15332 0
+  "slides.xdv" 1777446817.60576 210520 1adc7f728e29b2dabfb55291fb478fef "xelatex"
   (generated)
   "slides.pdf"
   (rewritten before read)
-["xelatex"] 1777082217.6691 "slides.tex" "slides.xdv" "slides" 1777082219.10768 0
-  "../Figure/train_log.png" 1777079998.45579 41196 7d1907f8440645863e6147a4de9d91a7 ""
+["xelatex"] 1777446816.43374 "slides.tex" "slides.xdv" "slides" 1777446818.15179 0
+  "../Figure/confusion_matrix.png" 1777446713.17777 144917 a98bd4ceb34bc24c0a306d0fb535d3d1 ""
+  "../Figure/train_log.png" 1777446725.67957 41196 7d1907f8440645863e6147a4de9d91a7 ""
   "/etc/texmf/web2c/texmf.cnf" 1774342625.45413 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -234,11 +235,11 @@
   "/usr/share/texmf/tex/latex/CJK/CJKfntef.sty" 1634405102 12851 25a9b5cc006609feb5c9a20ce24a5392 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1774342695 10841486 9a17c26caadebbce4522407645ace066 ""
-  "slides.aux" 1777082218.81824 2372 45947b61f982fca639b6f7da0898f2ff "xelatex"
-  "slides.nav" 1777082218.81824 1295 ef040a83926d85743749b42a2275f515 "xelatex"
-  "slides.out" 1777082218.44224 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "slides.tex" 1777082211.48873 11559 86caa8567ed4849e12358c9886c24663 ""
-  "slides.vrb" 1777082218.63824 827 307462a61d727c95be7550adc07b0943 "xelatex"
+  "slides.aux" 1777446817.60576 2714 19755f1c4abe7091002805448b1c7dbf "xelatex"
+  "slides.nav" 1777446817.60576 1481 4dff29d63ced408af8d13a7957e2a731 "xelatex"
+  "slides.out" 1777446817.17248 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "slides.tex" 1777446808.94883 13440 29c6ce0492e067415f9631adb41fe5f2 ""
+  "slides.vrb" 1777446817.39733 827 307462a61d727c95be7550adc07b0943 "xelatex"
   (generated)
   "slides.aux"
   "slides.log"

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.3.24)  25 APR 2026 09:50
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.3.24)  29 APR 2026 15:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -592,23 +592,25 @@ Package fontspec Info: Font family 'FandolFang-Regular(0)' created for font
 
 ]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 98.
- [2] [3]
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 102.
+ [2] [3] [4]
 File: ../Figure/train_log.png Graphic file (type bmp)
 <../Figure/train_log.png>
- [4] [5] (./main.aux)
+File: ../Figure/confusion_matrix.png Graphic file (type bmp)
+<../Figure/confusion_matrix.png>
+ [5] [6] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 11608 strings out of 474878
- 270154 string characters out of 5762516
- 2066627 words of memory out of 5000000
- 33472 multiletter control sequences out of 15000+600000
+ 11617 strings out of 474878
+ 270462 string characters out of 5762516
+ 2092627 words of memory out of 5000000
+ 33480 multiletter control sequences out of 15000+600000
  567372 words of font info for 96 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,12n,97p,461b,1757s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,12n,97p,461b,1868s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (5 pages, 96464 bytes).
+Output written on main.xdv (6 pages, 116336 bytes).

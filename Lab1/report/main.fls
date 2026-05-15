@@ -183,4 +183,7 @@ OUTPUT main.xdv
 INPUT ../Figure/train_log.png
 INPUT ../Figure/train_log.png
 INPUT ../Figure/train_log.png
+INPUT ../Figure/confusion_matrix.png
+INPUT ../Figure/confusion_matrix.png
+INPUT ../Figure/confusion_matrix.png
 INPUT main.aux

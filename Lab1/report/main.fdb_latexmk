@@ -1,13 +1,14 @@
 # Fdb version 4
-["xdvipdfmx"] 1777081825.37415 "main.xdv" "main.pdf" "main" 1777081825.59456 0
-  "main.xdv" 1777081825.33832 96464 a6e97bfafa42b5a40cc647db3a15f9b7 "xelatex"
+["xdvipdfmx"] 1777446786.52603 "main.xdv" "main.pdf" "main" 1777446786.98551 0
+  "main.xdv" 1777446786.48974 116336 76d679decbed6b4a29f9c99c52b2a91f "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1777081824.79355 "/home/gracchus/code/UCAS-Deep-Learning-2026Spring/Lab1/report/main.tex" "main.xdv" "main" 1777081825.5939 0
-  "../Figure/train_log.png" 1777079998.45579 41196 7d1907f8440645863e6147a4de9d91a7 ""
+["xelatex"] 1777446785.93584 "/home/gracchus/code/UCAS-Deep-Learning-2026Spring/Lab1/report/main.tex" "main.xdv" "main" 1777446786.9848 0
+  "../Figure/confusion_matrix.png" 1777446713.17777 144917 a98bd4ceb34bc24c0a306d0fb535d3d1 ""
+  "../Figure/train_log.png" 1777446725.67957 41196 7d1907f8440645863e6147a4de9d91a7 ""
   "/etc/texmf/web2c/texmf.cnf" 1774342625.45413 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/gracchus/code/UCAS-Deep-Learning-2026Spring/Lab1/report/main.tex" 1777081824.6389 10806 413cff356e03fddbdee530241c1b9c2a ""
+  "/home/gracchus/code/UCAS-Deep-Learning-2026Spring/Lab1/report/main.tex" 1777446191.22594 14004 1e5725565a980100fb00b62ad6a36487 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -101,8 +102,8 @@
   "/usr/share/texmf/tex/latex/CJK/CJKfntef.sty" 1634405102 12851 25a9b5cc006609feb5c9a20ce24a5392 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1774342695 10841486 9a17c26caadebbce4522407645ace066 ""
-  "main.aux" 1777081825.33832 1046 2c6ff3067d5fc0e80504c14ec24791d4 "xelatex"
-  "main.tex" 1777081824.6389 10806 413cff356e03fddbdee530241c1b9c2a ""
+  "main.aux" 1777446786.48565 1175 cf1bfc50515640cc2ec082bec59ad55e "xelatex"
+  "main.tex" 1777446191.22594 14004 1e5725565a980100fb00b62ad6a36487 ""
   (generated)
   "main.aux"
   "main.log"

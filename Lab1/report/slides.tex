@@ -195,6 +195,31 @@
 	\end{columns}
 \end{frame}
 
+\begin{frame}{结构设计分析}
+	\begin{columns}[T,onlytextwidth]
+		\begin{column}{0.49\textwidth}
+			\begin{block}{为什么使用浅层 CNN}
+				MNIST 图象分辨率小、背景简单，类别差异主要来自局部笔画和整体轮廓；两层卷积已经能够覆盖从边缘到笔画组合的特征层次。
+			\end{block}
+			\begin{itemize}
+				\item $5\times5$ 卷积覆盖较宽局部笔画区域
+				\item padding 2 保持空间尺寸，减少边缘信息丢失
+				\item ReLU 引入非线性表达能力
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.49\textwidth}
+			\begin{block}{池化与分类头}
+				最大池化将 $28\rightarrow14\rightarrow7$，在压缩空间尺寸的同时增强小幅平移鲁棒性；全连接层利用粗略空间分布完成类别判别。
+			\end{block}
+			\begin{itemize}
+				\item 第二层卷积组合更抽象的笔画结构
+				\item 3136 维特征保留局部结构分布
+				\item 参数主要集中在第一个全连接层
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
 \begin{frame}[fragile]{模型核心代码}
 \begin{lstlisting}
 class CNN(nn.Module):
@@ -330,39 +355,62 @@ class CNN(nn.Module):
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{结果分析}
+\begin{frame}{混淆矩阵分析}
 	\begin{columns}[T,onlytextwidth]
-		\begin{column}{0.49\textwidth}
-			\begin{block}{模型有效性}
-				两层卷积能够提取局部笔画、边缘和组合模式；对 MNIST 这种规整的灰度分类任务，浅层 CNN 已经具备较强表达能力。
-			\end{block}
+		\begin{column}{0.50\textwidth}
+			\centering
+			\includegraphics[width=0.92\linewidth]{confusion_matrix.png}
 		\end{column}
-		\begin{column}{0.49\textwidth}
-			\begin{block}{泛化表现}
-				训练后期验证集和测试集准确率保持在 99\% 左右，没有出现持续恶化的过拟合趋势。
+		\begin{column}{0.48\textwidth}
+			\begin{block}{整体表现}
+				测试集共 10000 张图象，正确分类 9933 张，错误分类 67 张，准确率为 \textbf{99.33\%}。
 			\end{block}
+			\begin{itemize}
+				\item 混淆矩阵对角线占主导，各类别识别稳定
+				\item 召回率相对最低的是数字 9，约为 98.61\%
+				\item 最大混淆：$9\rightarrow4$，共 6 次
+			\end{itemize}
 		\end{column}
 	\end{columns}
+\end{frame}
 
-	\vspace{0.4cm}
-	\begin{itemize}
-		\item 最终测试准确率：\textbf{99.33\%}
-		\item 实验要求：测试准确率不低于 98\%
-		\item 模型文件：\texttt{Lab1/model/cnn\_mnist.pth}
-	\end{itemize}
+\begin{frame}{错误类型分析}
+	\begin{columns}[T,onlytextwidth]
+		\begin{column}{0.49\textwidth}
+			\begin{block}{主要错误模式}
+				剩余错误主要出现在形态相近的数字之间，而不是某一类整体失效。
+			\end{block}
+			\begin{itemize}
+				\item $9\rightarrow4$：6 次
+				\item $5\rightarrow3$：5 次
+				\item $9\rightarrow5$：5 次
+				\item $7\rightarrow2$：4 次
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.49\textwidth}
+			\begin{block}{原因解释}
+				手写体的闭合程度、倾斜角度和笔画连接方式会改变数字轮廓，例如 9 的上半部分不明显时容易接近 4，5 和 3 都包含右侧弧形结构。
+			\end{block}
+			\begin{itemize}
+				\item 错误具有可解释的形态相似性
+				\item 当前模型没有表现出明显类别偏置
+				\item 可通过轻量几何增强继续改善鲁棒性
+			\end{itemize}
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \begin{frame}{总结}
 	\begin{block}{完成内容}
-		本次实验基于 PyTorch 完成了 MNIST 手写数字识别，包括数据加载与划分、CNN 模型搭建、训练评估、日志记录、模型保存和结果可视化。
+		本次实验基于 PyTorch 完成了 MNIST 手写数字识别，包括数据加载与划分、CNN 模型搭建、训练评估、日志记录、模型保存、训练曲线可视化和混淆矩阵分析。
 	\end{block}
 
 	\begin{block}{主要收获}
-		进一步熟悉了卷积、激活、池化和全连接分类头的配合方式，也掌握了 \texttt{Dataset}、\texttt{DataLoader}、\texttt{nn.Module}、反向传播和优化器更新的基本流程。
+		进一步熟悉了卷积、激活、池化和全连接分类头的配合方式，也观察到 CNN 对局部笔画特征、空间下采样和类别判别的建模过程。
 	\end{block}
 
 	\begin{block}{可改进方向}
-		固定随机种子增强复现性；加入输入标准化；补充混淆矩阵，分析不同数字类别之间的错误模式。
+		固定随机种子增强复现性；加入输入标准化；使用轻量几何增强提升模型对不同书写倾斜角度和笔画位置的鲁棒性。
 	\end{block}
 \end{frame}
 

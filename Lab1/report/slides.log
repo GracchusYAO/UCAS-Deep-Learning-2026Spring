@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.3.24)  25 APR 2026 09:56
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.3.24)  29 APR 2026 15:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1308,28 +1308,35 @@ LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <6> not available
 (Font)              Font shape `TU/lmss/m/sl' tried instead on input line 196.
  [5
 
+] [6
+
 ]
 \openout4 = `slides.vrb'.
 
  (./slides.vrb
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <7> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 3.
-) [6
-
-] [7
+) [7
 
 ] [8
 
 ] [9
 
+] [10
+
 ]
 File: ../Figure/train_log.png Graphic file (type bmp)
 <../Figure/train_log.png>
- [10
+ [11
 
-] [11
+]
+File: ../Figure/confusion_matrix.png Graphic file (type bmp)
+<../Figure/confusion_matrix.png>
+ [12
 
-] [12
+] [13
+
+] [14
 
 ]
 \tf@nav=\write6
@@ -1341,7 +1348,8 @@ File: ../Figure/train_log.png Graphic file (type bmp)
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
- (./slides.aux)
+
+(./slides.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1350,12 +1358,12 @@ Package rerunfilecheck Info: File `slides.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32523 strings out of 474878
- 718136 string characters out of 5762516
+ 32556 strings out of 474878
+ 719320 string characters out of 5762516
  2118627 words of memory out of 5000000
- 53915 multiletter control sequences out of 15000+600000
+ 53947 multiletter control sequences out of 15000+600000
  565216 words of font info for 102 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  142i,11n,137p,450b,1267s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on slides.xdv (12 pages, 179636 bytes).
+Output written on slides.xdv (14 pages, 210520 bytes).

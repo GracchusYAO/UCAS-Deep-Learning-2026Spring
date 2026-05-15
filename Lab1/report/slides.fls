@@ -451,6 +451,8 @@ INPUT ./slides.vrb
 INPUT slides.vrb
 INPUT ../Figure/train_log.png
 INPUT ../Figure/train_log.png
+INPUT ../Figure/confusion_matrix.png
+INPUT ../Figure/confusion_matrix.png
 OUTPUT slides.nav
 OUTPUT slides.toc
 OUTPUT slides.snm

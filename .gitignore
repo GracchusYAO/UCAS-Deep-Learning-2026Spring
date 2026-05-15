@@ -1,0 +1,11 @@
+# Dataset files
+Data/
+.codex
+
+# Trained model artifacts for each lab
+Lab*/model/
+
+# Python bytecode caches
+__pycache__/
+Lab*/__pycache__/
+*.py[cod]
