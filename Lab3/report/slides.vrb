@@ -1,0 +1,21 @@
+\frametitle{藏头诗核心逻辑}
+\begin{lstlisting}
+for i, head in enumerate(heads):
+    line = [head]              # 每句首字强制为藏头字
+    output, hidden = feed_word(model, word2ix[head], hidden, device)
+
+    for _ in range(line_len - 1):
+        next_idx, word = sample_word(output, ix2word, word2ix)
+        line.append(word)
+        output, hidden = feed_word(model, next_idx, hidden, device)
+
+    punctuation = "。" if i % 2 == 1 or i == len(heads) - 1 else "，"
+    line.append(punctuation)
+    if punctuation in word2ix:
+        _, hidden = feed_word(model, word2ix[punctuation], hidden, device)
+\end{lstlisting}
+
+^^I\vspace{0.25cm}
+^^I\begin{block}{关键点}
+^^I^^I句内不让模型自由生成标点，而是在固定长度后统一补标点，因此格式比普通续写稳定。
+^^I\end{block}
