@@ -1,0 +1,22 @@
+\frametitle{前向传播核心代码}
+\begin{lstlisting}
+def forward(self, src, tgt_input):
+    src_key_padding_mask, tgt_key_padding_mask, tgt_mask = create_masks(
+        src, tgt_input, self.src_pad_idx, self.tgt_pad_idx
+    )
+
+    src_emb = self.positional_encoding(self.src_embedding(src))
+    tgt_emb = self.positional_encoding(self.tgt_embedding(tgt_input))
+
+    memory = self.transformer.encoder(
+        src_emb,
+        src_key_padding_mask=src_key_padding_mask
+    )
+    output = self.transformer.decoder(
+        tgt_emb, memory,
+        tgt_mask=tgt_mask,
+        tgt_key_padding_mask=tgt_key_padding_mask,
+        memory_key_padding_mask=src_key_padding_mask
+    )
+    return self.generator(output)
+\end{lstlisting}
